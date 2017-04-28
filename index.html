@@ -8,7 +8,7 @@
 <body>
     <!----------------Side Bar-------------------------->
     <div class="w3-sidebar  w3-bar-block w3-card-2 w3-animate-left" style="display:none" id="sideBar">
-
+        
         <button class="sideBarButton" onclick="sidebar_close()">
             <img src="./resources/icons/home-32.png" alt="Home">
             <p class="sideBarText">Home</p>
@@ -32,7 +32,12 @@
       
     </div>
     <!----------------This part update for different pages---->
-    <div zclass="w3-main" id="main" style="background: gray">
+    <div zclass="w3-main" id="main">
+        <div class="backgroundImage">
+            <img src="./resources/backgrounds/karnafuli-river.jpg" alt="">
+        </div>
+        <div class="holder">
+       <div class="home-upper">
         <div class="w3-row" style="padding-top: 10px">
                 
             <div class="w3-col" style="width: 5%">
@@ -58,8 +63,43 @@
                     startTime();
                 </script>
             </div>
+            </div>   
         </div>
-        <img src="./resources/icons/ship-256.png" alt="Ship">
+        <div class="circular-container">
+            <p>Circle!!</p>
+        </div>
+        <div class="home-lower">
+            <button class="round-btn-outer-circle">
+                <div class="round-btn">
+                    <img src="./resources/icons/weather-64.png" alt="">
+                    <p class="home-menu-text">Weather</p>
+                </div>
+            </button>
+            <button class="round-btn-outer-circle">
+                <div class="round-btn">
+                    <img src="./resources/icons/map-64.png" alt="">
+                    <p class="home-menu-text">Map</p>
+                </div>
+            </button>
+            <button class="round-btn-outer-circle">
+                <div class="round-btn">
+                    <img src="./resources/icons/schedule-64.png" alt="">
+                    <p class="home-menu-text">Schedule</p>
+                </div>
+            </button>
+            <button class="round-btn-outer-circle">
+                <div class="round-btn">
+                    <img src="./resources/icons/setting-64.png" alt="">
+                     <p class="home-menu-text">Settings</p>
+                </div>
+            </button>
+
+
+        </div>
+        
+       <!-- <img src="./resources/icons/ship-256.png" alt="Ship">
+         -->
+    </div>
     </div>
 
     <script src="./src/script/sidebar.js">
