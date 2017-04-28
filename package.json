@@ -1,0 +1,22 @@
+{
+  "name": "rvts-desktop",
+  "version": "1.0.0",
+  "description": "Desktop App for Riverine Vehicle Tracking System",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Emruz-Hossain/RVTS-Desktop.git"
+  },
+  "author": "Emruz-Hossain",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Emruz-Hossain/RVTS-Desktop/issues"
+  },
+  "homepage": "https://github.com/Emruz-Hossain/RVTS-Desktop#readme",
+  "dependencies": {
+    "jquery": "^3.2.1"
+  }
+}

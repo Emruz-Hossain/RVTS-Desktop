@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="./src/css/w3.css">
+<link rel="stylesheet"  href="./src/css/style.css">
+
+<body>
+    <!----------------Side Bar-------------------------->
+    <div class="w3-sidebar  w3-bar-block w3-card-2 w3-animate-left" style="display:none" id="sideBar">
+
+        <button class="sideBarButton" onclick="sidebar_close()">
+            <img src="./resources/icons/home-32.png" alt="Home">
+            <p class="sideBarText">Home</p>
+        </button>
+        <button class="sideBarButton" onclick="sidebar_close()">
+            <img src="./resources/icons/weather-32.png" alt="Weather">
+            <p class="sideBarText">Weather</p>
+        </button>
+        <button class="sideBarButton" onclick="sidebar_close()">
+            <img src="./resources/icons/map-32.png" alt="Map">
+            <p class="sideBarText">Map</p>
+        </button>
+        <button class="sideBarButton" onclick="sidebar_close()">
+            <img src="./resources/icons/schedule-32.png" alt="Schedule">
+            <p class="sideBarText">Schedule</p>
+        </button>
+        <button class="sideBarButton" onclick="sidebar_close()">
+            <img src="./resources/icons/setting-32.png" alt="Settings">
+            <p class="sideBarText">Settings</p>
+        </button>
+      
+    </div>
+    <!----------------This part update for different pages---->
+    <div zclass="w3-main" id="main" style="background: gray">
+        <div class="w3-row" style="padding-top: 10px">
+                
+            <div class="w3-col" style="width: 5%">
+                <button class="w3-button w3-teal w3-xlarge" onclick="sidebar_open()">&#9776;</button>
+            </div>
+
+            <div class="w3-col" style="width: 70%">
+                <p>  </p>
+            </div>
+            <div class="w3-col w3-dark-grey" style="width: 25%">
+                <p id="timeDate" style="text-align: center; font-size: 12pt;"></p>
+                <script>
+                    function startTime() {
+                        var today = new Date();
+                        var d = new Date(today);
+                        document.getElementById('timeDate').innerHTML = d;
+                        var t = setTimeout(startTime, 500);
+                    }
+                    function checkTime(i) {
+                        if (i < 10) { i = "0" + i };  // add zero in front of numbers < 10
+                        return i;
+                    }
+                    startTime();
+                </script>
+            </div>
+        </div>
+        <img src="./resources/icons/ship-256.png" alt="Ship">
+    </div>
+
+    <script src="./src/script/sidebar.js">
+    </script>
+
+</body>
+
+</html>
