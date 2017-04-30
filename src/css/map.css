@@ -1,0 +1,23 @@
+#map{
+    height: 685px;
+    width: 100%;
+    position: absolute;
+    z-index: 0;
+}
+#nav-icon-map{
+    background:none;
+    border: none;
+    position: absolute;
+    margin-left: 8%;
+    margin-top: 0.6%;
+    height: 30px;
+    width: 30px;
+    font-size: 16pt;
+    
+}
+#nav-icon-map:hover{
+    background: gray;
+}
+#nav-icon-map:focus{
+    outline: none;
+}
