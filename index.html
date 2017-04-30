@@ -4,6 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="./src/css/w3.css">
 <link rel="stylesheet"  href="./src/css/style.css">
+<link rel="stylesheet" type="" href="./src/css/home.css">
 
 <body>
     <!----------------Side Bar-------------------------->
@@ -33,77 +34,49 @@
     </div>
     <!----------------This part update for different pages---->
     <div zclass="w3-main" id="main">
-        <div class="backgroundImage">
-            <img src="./resources/backgrounds/karnafuli-river.jpg" alt="">
-        </div>
-        <div class="holder">
-       <div class="home-upper">
-        <div class="w3-row" style="padding-top: 10px">
-                
-            <div class="w3-col" style="width: 5%">
-                <button class="w3-button w3-teal w3-xlarge" onclick="sidebar_open()">&#9776;</button>
+        <div class="home-upper">
+            <div class="nav-icon">
+                <button class="nav-button" onclick="sidebar_control()">&#9776;</button>
             </div>
-
-            <div class="w3-col" style="width: 70%">
-                <p>  </p>
+            <div class="clock-div">
+                <p class="clock-text" id="timeDate"></p>
             </div>
-            <div class="w3-col w3-dark-grey" style="width: 25%">
-                <p id="timeDate" style="text-align: center; font-size: 12pt;"></p>
-                <script>
-                    function startTime() {
-                        var today = new Date();
-                        var d = new Date(today);
-                        document.getElementById('timeDate').innerHTML = d;
-                        var t = setTimeout(startTime, 500);
-                    }
-                    function checkTime(i) {
-                        if (i < 10) { i = "0" + i };  // add zero in front of numbers < 10
-                        return i;
-                    }
-                    startTime();
-                </script>
+            <div class="home-info-holder">
+                <img src="./resources/icons/ship-128.png" alt="Ship" id="ship-icon">
+                <h1 id="vessel-name" class="white-font">MV MARINAR 4</h1>
+                <p class="white-font">Owner: Mr. Nobody Co. Ltd.</p>
+                <h3 class="white-font">Max. Capacity: 450 persons or 900 Tons</h3>
+                <h3>Corrent Load: 80 % of capacity</h3>
+                <h2 id="status-text">SAFE</h2>
             </div>
-            </div>   
-        </div>
-        <div class="circular-container">
-            <p>Circle!!</p>
         </div>
         <div class="home-lower">
-            <button class="round-btn-outer-circle">
-                <div class="round-btn">
-                    <img src="./resources/icons/weather-64.png" alt="">
-                    <p class="home-menu-text">Weather</p>
-                </div>
+            <button type="" class="home-menu-button">
+                <img src="./resources/icons/weather-home-32.png" alt="Weather">
+                <p class="home-menu-button-text">Weather</p>
             </button>
-            <button class="round-btn-outer-circle">
-                <div class="round-btn">
-                    <img src="./resources/icons/map-64.png" alt="">
-                    <p class="home-menu-text">Map</p>
-                </div>
+            <button type="" class="home-menu-button">
+                <img src="./resources/icons/map-home-32.png" alt="Weather">
+                <p class="home-menu-button-text">Map</p>
             </button>
-            <button class="round-btn-outer-circle">
-                <div class="round-btn">
-                    <img src="./resources/icons/schedule-64.png" alt="">
-                    <p class="home-menu-text">Schedule</p>
-                </div>
+            <button type="" class="home-menu-button">
+                <img src="./resources/icons/schedule-home-32.png" alt="Weather">
+                <p class="home-menu-button-text">Schedule</p>
             </button>
-            <button class="round-btn-outer-circle">
-                <div class="round-btn">
-                    <img src="./resources/icons/setting-64.png" alt="">
-                     <p class="home-menu-text">Settings</p>
-                </div>
+            <button type="" class="home-menu-button">
+                <img src="./resources/icons/setting-home-32.png" alt="Weather">
+                <p class="home-menu-button-text">Settings</p>
             </button>
+        </div>
+
 
 
         </div>
-        
-       <!-- <img src="./resources/icons/ship-256.png" alt="Ship">
-         -->
     </div>
     </div>
 
-    <script src="./src/script/sidebar.js">
-    </script>
+    <script src="./src/script/sidebar.js"></script>
+    <script src="./src/script/home.js"></script>
 
 </body>
 
