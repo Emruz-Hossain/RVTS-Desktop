@@ -1,0 +1,119 @@
+.weather-upper{
+    background-color:	#56818f	;
+    height: 500px;
+    width: 100%;
+    background-image: url("../../resources/backgrounds/wave2.png");
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+.weather-info-holder{
+    float: center;
+    width: 50%;
+    height: 70%;
+    left: 25%;
+    top:20%;
+  
+    position: relative;
+    align-content: center;
+    text-align: center;
+}
+.current-weather-icon{
+    font-size: 36pt;
+    float: center;
+    
+}
+.temp-text{
+    font-size: 32pt;
+    width: 50%;
+}
+.temp-unit{
+    font-size: 32pt;
+}
+.temp-details{
+    font-size: 18pt;
+    float:right;
+    text-align: right;
+}
+.font-white{
+    color: white;
+    width: 50%;
+}
+.weather-lower{
+    background: white;
+    width: 100%;
+    height: 145px;
+    padding-left: 10%;
+    padding-right: 10%;
+    position: absolute;
+}
+
+.nav-button{
+    background: none;
+    border: none;
+    margin: none;
+    height: 50px;
+    width: 50px;
+    float: left;
+    font-size: 22pt;
+    text-align: center;
+    color: white;
+}
+.nav-button:focus{
+    outline: none;
+}
+.clock-div{
+    float: right;
+    text-align: center;
+    margin-right: 10px;
+}
+.clock-text{
+    font-size: 18pt;
+    color: white;
+
+}
+.city{
+    float: center;
+    position: relative;
+    left: 25%;
+}
+.city-text{
+    font-size: 16pt;
+    text-align: center;
+}
+.forecast-item-holder{
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 3%;
+}
+.forecast-icon{
+    font-size: 24pt;
+}
+.col-1{
+    animation-delay: 0.5s;
+    animation: weatheranimatezoom 2.0s;
+}
+@keyframes weatheranimatezoom
+{
+    from{
+        transform: scale(0);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+.col-2{
+    animation-delay: 1s;
+    animation: weatheranimatezoom 2.0s;
+}
+.col-3{
+    animation-delay: 1.5s;
+    animation: weatheranimatezoom 2.0s;
+}
+.col-4{
+    animation-delay: 2s;
+    animation: weatheranimatezoom 2.0s;
+}
+.col-5{
+    animation-delay: 2.5;
+    animation: weatheranimatezoom 2.0s;
+}

@@ -1,4 +1,11 @@
 {
-    "MonthName": ["January","February","March","April","May","June","July","August","September","October","November","December"]
-
+    "MonthName": ["January","February","March","April","May","June","July","August","September","October","November","December"],
+    "color": {
+        "error": "#444444",
+        "list": [ "#b1695a", "#DB9864",   "#E3BB88", "#D0C7A8",   "#B1C2A3",  "#80BBB2",   "#6D9E96",   "#8F95A5",    "#6F7685" ]
+    },
+    "DayName": ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+    "Icons": ["wi-cloudy","wi-rain","wi-wu-sunny","wi-night-alt-cloudy","wi-wu-mostlycloudy"],
+    "Temp": ["28","26","32","27","30"],
+    "TempDetails":["Cloudy","Light rain","Sky is clear","Cloudy","Mostly cloudy"]
 }

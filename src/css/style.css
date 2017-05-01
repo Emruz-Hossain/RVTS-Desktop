@@ -15,3 +15,27 @@
     text-align: center;
     color: white;
 }
+#main{
+    background-color: #56818f;
+}
+.animate-zoom {
+    animation:animatezoom 1.0s
+    }
+    @keyframes animatezoom{
+        from{
+            transform:scale(0)
+            } to{
+                transform:scale(1)
+                }
+            }
+.animate-bottom{
+    /*position:relative;*/
+    animation:animatebottom 1.0s
+    }
+    @keyframes animatebottom{
+        from{
+            bottom:-300px;opacity:1
+            } to{
+                bottom:0;opacity:1
+                }
+            }
