@@ -2,7 +2,7 @@
 const config = require('./././config.json');
 function startTime() {
     var today = new Date();
-    var t = getTime(today.getHours(), today.getMinutes(), today.getSeconds()) + "<br>" + getDate(today.getDate(), today.getMonth(), today.getFullYear());
+    var t = getTime(today.getHours(), today.getMinutes(), today.getSeconds()) +"<br>"+config.DayName[today.getDay()]+ "<br>" + getDate(today.getDate(), today.getMonth(), today.getFullYear());
     document.getElementById('timeDate').innerHTML = t;
     var t = setTimeout(startTime, 500);
 }

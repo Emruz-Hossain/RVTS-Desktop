@@ -12,6 +12,7 @@
 <link rel="stylesheet" type="" href="./src/css/weather-icons.css">
 <link rel="stylesheet" type="" href="./src/css/weather-icons.min.css">
 <link rel="stylesheet" type="" href="./src/css/weather.css">
+<link rel="stylesheet" type="" href="./src/css/schedule.css">
 <body>
     <!----------------Side Bar-------------------------->
     <div class="w3-sidebar  w3-bar-block w3-card-2 w3-animate-left" style="display:none" id="sideBar">
@@ -40,66 +41,29 @@
     </div>
     <!----------------This part update for different pages---->
     <div zclass="w3-main" id="main">
-       <div class="weather-upper">
+            <div class="schedule-upper">
             <div class="nav-icon">
                 <button class="nav-button" onclick="sidebar_control()">&#9776;</button>
             </div>
-            <div class="clock-div">
-                <p class="clock-text" id="timeDate"></p>
+            <div class="search-holder">
+                <form>
+                    <input type="text" class="search-bar w3-animate-right" name="search-bar" id="search-input" onkeyup="interActiveSearch()" placeholder="Search...">
+                </form>
             </div>
-           
-            <div class="weather-info-holder">
-                <i class="wi wi-day-cloudy-windy current-weather-icon font-white animate-bottom"></i>
-            <div class="temp-info-holder animate-zoom">
-                <span class="temp-text font-white" id="temp-text">32</span>
-                <span class="font-white temp-unit"><i class="wi wi-celsius"></i></span>
-                <br>
-                <span class="temp-details font-white">Partly Cloudy</span>
-                <br>
-                <hr>
-                <div class="additional-temp-details">
-                    <span class="w3-margin font-white" id="max-temp">Max temp: 34</span><span class="w3-margin font-white" id="min-temp">Min temp: 28</span><span class="w3-margin font-white" id="pressure">Pressure: 1005.93</span><span class="w3-margin font-white" id="wind">Wind: 5.71km/h 229.501 degree</span>
-                </div>
-               <div class="city">
-                     <p class="font-white city-text">Chittagon, BD</p>
-               </div>
-            </div>
-    
-            </div>
+                
+        
         </div>
-        <div class="weather-lower">
-            <!--<div>
-                <h3 style="text-align: center;"><u>This Week</u></h3>
-            </div>-->
-            <table class="forecast-item-holder">
-                <tr class="forecast-day">
-                    <th class="col-1"></th>
-                    <th class="col-2"></th>
-                    <th class="col-3"></th>
-                    <th class="col-4"></th>
-                    <th class="col-5"></th>
+        <div class="schedule-lower w3-animate-zoom">
+            <table class="schedule-table" id="schedule-table">
+                <tr class="header">
+                    <th class="serial">SL.</th>
+                    <th class="vessel-name">Vessle Name</th>
+                    <th class="source">Source Station</th>
+                    <th class="destination">Destination</th>
+                    <th class="departure-time">Departure Time from Source</th>
+                    <th class="arrival-time">Arrialval Time at Destination</th>
                 </tr>
-                <tr class="forecast-icon">
-                    <th class="col-1"></th>
-                    <th class="col-2"></th>
-                    <th class="col-3"></th>
-                    <th class="col-4"></th>
-                    <th class="col-5"></th>
-                </tr>
-                <tr class="forecast-temp">
-                    <th class="col-1"><span class="temp"></span><span class="wi wi-celsius"></span></th>
-                    <th class="col-2"><span class="temp"></span><span class="wi wi-celsius"></span></th>
-                    <th class="col-3"><span class="temp"></span><span class="wi wi-celsius"></span></th>
-                    <th class="col-4"><span class="temp"></span><span class="wi wi-celsius"></span></th>
-                    <th class="col-5"><span class="temp"></span><span class="wi wi-celsius"></span></th>
-                </tr>
-                <tr class="forecast-details">
-                    <th class="col-1"></th>
-                    <th class="col-2"></th>
-                    <th class="col-3"></th>
-                    <th class="col-4"></th>
-                    <th class="col-5"></th>
-                </tr>
+                
             </table>
         </div>
 
@@ -108,6 +72,7 @@
     <script src="./src/script/sidebar.js"></script>
     <script src="./src/script/home.js"></script>
     <script src="./src/script/weather.js"></script>
+    <script src="./src/script/schedule.js"></script>
 
 </body>
 
