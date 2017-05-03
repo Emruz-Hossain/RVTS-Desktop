@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title>W3.CSS</title>
+<title>Riverine Vehicle Tracking System (RVTS)</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="./src/css/w3.css">
 <link rel="stylesheet"  href="./src/css/style.css">
@@ -13,27 +13,29 @@
 <link rel="stylesheet" type="" href="./src/css/weather-icons.min.css">
 <link rel="stylesheet" type="" href="./src/css/weather.css">
 <link rel="stylesheet" type="" href="./src/css/schedule.css">
+<link rel="stylesheet" type="" href="./src/css/ionicons.css">
+<link rel="stylesheet" type="" href="./src/css/setting.css">
 <body>
     <!----------------Side Bar-------------------------->
     <div class="w3-sidebar  w3-bar-block w3-card-2 w3-animate-left" style="display:none" id="sideBar">
         
-        <button class="sideBarButton" onclick="sidebar_close()">
+        <button class="sideBarButton" onclick="showHomePage()">
             <img src="./resources/icons/home-32.png" alt="Home">
             <p class="sideBarText">Home</p>
         </button>
-        <button class="sideBarButton" onclick="sidebar_close()">
+        <button class="sideBarButton" onclick="showWeatherPage()">
             <img src="./resources/icons/weather-32.png" alt="Weather">
             <p class="sideBarText">Weather</p>
         </button>
-        <button class="sideBarButton" onclick="sidebar_close()">
+        <button class="sideBarButton" onclick="showMapPage()">
             <img src="./resources/icons/map-32.png" alt="Map">
             <p class="sideBarText">Map</p>
         </button>
-        <button class="sideBarButton" onclick="sidebar_close()">
+        <button class="sideBarButton" onclick="showSchedulePage()">
             <img src="./resources/icons/schedule-32.png" alt="Schedule">
             <p class="sideBarText">Schedule</p>
         </button>
-        <button class="sideBarButton" onclick="sidebar_close()">
+        <button class="sideBarButton" onclick="showSettingPage()">
             <img src="./resources/icons/setting-32.png" alt="Settings">
             <p class="sideBarText">Settings</p>
         </button>
@@ -41,31 +43,7 @@
     </div>
     <!----------------This part update for different pages---->
     <div zclass="w3-main" id="main">
-            <div class="schedule-upper">
-            <div class="nav-icon">
-                <button class="nav-button" onclick="sidebar_control()">&#9776;</button>
-            </div>
-            <div class="search-holder">
-                <form>
-                    <input type="text" class="search-bar w3-animate-right" name="search-bar" id="search-input" onkeyup="interActiveSearch()" placeholder="Search...">
-                </form>
-            </div>
-                
         
-        </div>
-        <div class="schedule-lower w3-animate-zoom">
-            <table class="schedule-table" id="schedule-table">
-                <tr class="header">
-                    <th class="serial">SL.</th>
-                    <th class="vessel-name">Vessle Name</th>
-                    <th class="source">Source Station</th>
-                    <th class="destination">Destination</th>
-                    <th class="departure-time">Departure Time from Source</th>
-                    <th class="arrival-time">Arrialval Time at Destination</th>
-                </tr>
-                
-            </table>
-        </div>
 
     </div>
 
@@ -73,7 +51,8 @@
     <script src="./src/script/home.js"></script>
     <script src="./src/script/weather.js"></script>
     <script src="./src/script/schedule.js"></script>
-
+    <script src="./src/script/setting.js"></script>
+     <script src="./src/script/control.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,29 @@
+<div class="schedule-upper">
+    <div class="nav-icon">
+        <button class="nav-button" onclick="sidebar_control()">&#9776;</button>
+    </div>
+    <div class="search-holder">
+        <form>
+            <input type="text" class="search-bar w3-animate-right" name="search-bar" id="search-input" onkeyup="interActiveSearch()"
+                placeholder="Search...">
+        </form>
+    </div>
+
+
+</div>
+<div class="schedule-lower animate-zoom">
+    <table class="schedule-table" id="schedule-table">
+        <tr class="header">
+            <th class="serial">SL.</th>
+            <th class="vessel-name">Vessle Name</th>
+            <th class="source">Source Station</th>
+            <th class="destination">Destination</th>
+            <th class="departure-time">Departure Time from Source</th>
+            <th class="arrival-time">Arrialval Time at Destination</th>
+        </tr>
+
+    </table>
+</div>
+<script>
+    setTableContent();
+</script>

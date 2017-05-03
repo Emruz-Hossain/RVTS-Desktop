@@ -19,11 +19,13 @@
     position: relative;
     margin: 1%;
     width: 2%;
+    height: 40px;
     border: none;
     font-size: 12pt;
     background: lightsteelblue;
     background-image: url('../../resources/icons/search-32.png');
-    background-position: 10px 10px; 
+    
+    background-position: 10px 5px; 
     background-repeat: no-repeat;
     padding: 12px 20px 12px 30px;
     -webkit-transition: width 0.4s ease-in-out;

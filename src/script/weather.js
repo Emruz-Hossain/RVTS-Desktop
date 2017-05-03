@@ -1,7 +1,7 @@
 const $ = require('jquery');
-const weatherinfo = require('./././config.json');
+const weatherinfo = require('/home/learner/ElectronProject/RVTS-Desktop/config.json');
 
-function setDays() {
+function setDays() {    
     
     var today = new Date();
     var dayno = today.getDay();
@@ -66,7 +66,9 @@ function setTempDetails() {
     $(".forecast-item-holder .forecast-details .col-4").text(weatherinfo.TempDetails[sl++]);
     $(".forecast-item-holder .forecast-details .col-5").text(weatherinfo.TempDetails[sl++]);
 }
+function load_weather_content() {   
 setDays();
 setIcon();
 setTemp();
 setTempDetails();
+}

@@ -14,7 +14,6 @@ function setTableContent() {
        
 
 }
-setTableContent();
 
 function interActiveSearch() {
     var input, filter, table, tr, td, i;
