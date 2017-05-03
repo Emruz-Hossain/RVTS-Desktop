@@ -1,5 +1,5 @@
 const $ = require('jquery');
-const weatherinfo = require('/home/learner/ElectronProject/RVTS-Desktop/config.json');
+const weatherinfo = require('./config.json');
 
 function setDays() {    
     
