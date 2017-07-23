@@ -17,6 +17,10 @@
   },
   "homepage": "https://github.com/Emruz-Hossain/RVTS-Desktop#readme",
   "dependencies": {
-    "jquery": "^3.2.1"
+    "jquery": "^3.2.1",
+    "serialport": "^5.0.0-beta8"
+  },
+  "devDependencies": {
+    "electron-rebuild": "^1.5.11"
   }
 }

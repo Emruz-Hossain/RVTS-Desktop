@@ -12,5 +12,4 @@ function creatWindow() {
         slashes: true
     }))
 }
-
 app.on('ready',creatWindow)

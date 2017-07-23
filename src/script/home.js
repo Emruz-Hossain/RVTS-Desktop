@@ -1,5 +1,6 @@
 
 const config = require('./././config.json');
+
 function startTime() {
     var today = new Date();
     var t = getTime(today.getHours(), today.getMinutes(), today.getSeconds()) +"<br>"+config.DayName[today.getDay()]+ "<br>" + getDate(today.getDate(), today.getMonth(), today.getFullYear());
