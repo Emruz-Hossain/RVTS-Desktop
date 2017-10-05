@@ -1,6 +1,7 @@
 const { app, BrowserWindow } = require('electron')
 const url = require('url')
 const path = require('path')
+// var serilPortCom = require('./app.js');
 process.env.GOOGLE_API_KEY = "AIzaSyBMbArU0qJJusHE-rKuI839Sy36K0q8900"
 let win
 

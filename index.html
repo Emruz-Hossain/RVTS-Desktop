@@ -15,6 +15,7 @@
 <link rel="stylesheet" type="" href="./src/css/schedule.css">
 <link rel="stylesheet" type="" href="./src/css/ionicons.css">
 <link rel="stylesheet" type="" href="./src/css/setting.css">
+<script src="./src/script/weather.js"></script>
 <body>
     <!----------------Side Bar-------------------------->
     <div class="w3-sidebar  w3-bar-block w3-card-2 w3-animate-left" style="display:none" id="sideBar">
@@ -42,17 +43,48 @@
       
     </div>
     <!----------------This part update for different pages---->
+        <div class="w3-white w3-card w3-red">
+            <h1 class="w3-red" id="warning-div" style="text-align: center; display: none;">Warning!!! Distance is less than safe level.</h1>
+        </div>
     <div zclass="w3-main" id="main">
-        
 
     </div>
-
+    <script src="./node_modules/"></script>
+    <!-- <script src="./src/script/serverconnection.js"></script> -->
+    <script src="./src/script/map.js"></script>
     <script src="./src/script/sidebar.js"></script>
     <script src="./src/script/home.js"></script>
-    <script src="./src/script/weather.js"></script>
+    
     <script src="./src/script/schedule.js"></script>
     <script src="./src/script/setting.js"></script>
-     <script src="./src/script/control.js"></script>
+    <script src="./src/script/control.js"></script>
+    <script>
+        var SerialPort = require('serialport');
+        var Readline = SerialPort.parsers.Readline;
+        var port = new SerialPort('/dev/ttyACM0');
+        var parser = port.pipe(Readline({ delimiter: '\r\n' }));
+        parser.on('data', function (str) {
+            console.log(str);
+            // writeToFile(str);
+            var datas = str.split("#");
+            displayLoadStatus(datas[0]);
+            if (datas.length > 1) {
+                if (datas[1] > 0) {
+                   // gpsInfo(datas[1], datas[2], datas[3]);
+                    setGpsInfo(datas[1],datas[2],datas[3]);
+                    sendData();
+                    
+                }
+                // ("dist: "+datas[0]+"lat: "+datas[1]+"long: "+datas[2]+"speed: "+datas[3]);
+            }
+        });
+        // port.write('1',function(err){
+        //     if(err)
+        //         console.log(err);
+        //     else
+        //         console.log("write successfull");
+        // });
+    </script>
 </body>
 
 </html>

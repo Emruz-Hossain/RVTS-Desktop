@@ -4,7 +4,8 @@
   "description": "Desktop App for Riverine Vehicle Tracking System",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "rebuild": "./node_modules/.bin/electron-rebuild -f -l -p -v=1.4.13 -w=leveldown"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,7 @@
   "dependencies": {
     "jquery": "^3.2.1",
     "serialport": "^5.0.0-beta8"
+    
   },
   "devDependencies": {
     "electron-rebuild": "^1.5.11"

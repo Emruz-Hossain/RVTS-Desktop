@@ -7,11 +7,12 @@
     </div>
     <div class="home-info-holder">
         <img src="./resources/icons/ship-128.png" alt="Ship" id="ship-icon" class="animate-zoom">
-        <h1 id="vessel-name" class="white-font animate-zoom">MV MARINAR 4</h1>
-        <p class="white-font animate-zoom">Owner: Mr. Nobody Co. Ltd.</p>
-        <h3 class="white-font animate-zoom">Max. Capacity: 450 persons or 900 Tons</h3>
-        <h3 class="animate-zoom" id="load-status">Corrent Load: 80 % of capacity</h3>
-        <h2 id="status-text" class="animate-zoom">SAFE</h2>
+        <h1 class="white-font animate-zoom"><span id="vessel-name">MV MARINAR 4</span></h1>
+        <p class="white-font animate-zoom">Owner: <span id="owner-name">Mr. Nobody Co. Ltd.</span></p>
+        <h3 class="white-fot animate-zoom">Destination: <span id="home-destination-text">Select Destination</span></h3>
+        <h3 class="white-font animate-zoom">Max. Capacity: <span id="capacity">600</span> Tons</h3>
+        <h3 class="animate-zoom" id="current-load">Corrent Load: 00 % of capacity</h3>
+        <h2 class="animate-zoom" id="load-status">SAFE</h2>
     </div>
 </div>
 <div class="home-lower">
@@ -22,7 +23,7 @@
     <button type="" class="home-menu-button animate-zoom" onclick="showMapPage()">
                 <img src="./resources/icons/map-home-32.png" alt="Weather">
                 <p class="home-menu-button-text">Map</p>
-            </button>
+    </button>
     <button type="" class="home-menu-button animate-zoom" onclick="showSchedulePage()">
                 <img src="./resources/icons/schedule-home-32.png" alt="Weather">
                 <p class="home-menu-button-text">Schedule</p>
@@ -32,3 +33,4 @@
                 <p class="home-menu-button-text">Settings</p>
             </button>
 </div>
+  <script>getTargetVesselInfo(25);</script>

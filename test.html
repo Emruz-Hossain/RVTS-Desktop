@@ -22,9 +22,11 @@
     <div id="map"></div>
     <script>
       var map;
-      var mylocation= { lat: 22.4601088, lng: 91.96941089999996 };
+      // var mylocation= { lat: 22.4601088, lng: 91.96941089999996 };
+      //ensure that your API is enabled at https://console.developers.google.com/apis/api/geolocation/overview?project=rvts-desktop-app-1493546896586&duration=PT1H
       navigator.geolocation.getCurrentPosition(initMap);
       function initMap(position) {
+        console.log(position);
         lat = position.coords.latitude; 
         lon = position.coords.longitude;
         acc = position.coords.accuracy;
@@ -41,6 +43,22 @@
         title: lat+" "+lon+" acc="+acc+ " speed="+speed
       });
       }
+
+      function geo_success(position) {
+          console.log("lat: "+position.coords.latitude+"lng: "+position.coords.longitude);
+        }
+
+        function geo_error() {
+          alert("Sorry, no position available.");
+        }
+
+        var geo_options = {
+          enableHighAccuracy: true,
+          maximumAge: 30000,
+          timeout: 27000
+        };
+
+        var wpid = navigator.geolocation.watchPosition(geo_success, geo_error, geo_options);
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBMbArU0qJJusHE-rKuI839Sy36K0q8900&callback=initMap"
     async defer></script>
