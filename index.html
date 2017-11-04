@@ -67,12 +67,12 @@
             console.log(str);
             // writeToFile(str);
             var datas = str.split("#");
+            sendData();
             displayLoadStatus(datas[0]);
             if (datas.length > 1) {
                 if (datas[1] > 0) {
                    // gpsInfo(datas[1], datas[2], datas[3]);
-                    setGpsInfo(datas[1],datas[2],datas[3]);
-                    sendData();
+                    // setGpsInfo(datas[1],datas[2],datas[3]);
                     
                 }
                 // ("dist: "+datas[0]+"lat: "+datas[1]+"long: "+datas[2]+"speed: "+datas[3]);

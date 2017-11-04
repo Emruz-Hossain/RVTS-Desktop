@@ -112,8 +112,8 @@ var fso = new ActiveXObject("Scripting.FileSystemObject");
 }
 
 
-var slat = 21.3243434;
-var slng = 90.32432423;
+var slat = 23.769357;
+var slng = 90.381475;
 var sload_status = "Safe";
 var sload_percentage = 0;
 var srunning_status = 1;
@@ -124,11 +124,11 @@ function setLoadStatus(lstatus, lpercentage) {
     sload_status = lstatus;
     sload_percentage = lpercentage;
 }
-function setGpsInfo(lat, lng, speed) {
-    slat = lat;
-    slng = lng;
-    sspeed = speed;
-}
+// function setGpsInfo(lat, lng, speed) {
+//     slat = lat;
+//     slng = lng;
+//     sspeed = speed;
+// }
 
 function updateVesselInfo(id,destination,loadStatus,loadPercentage,latitude,longitude,speed) {
     if (window.XMLHttpRequest) // for new browser
@@ -166,5 +166,5 @@ function sendData()
     console.log("sendData() called");
     var dropdown = document.getElementById("destination-selector");
     // var destination = dropdown.options[dropdown.selectedIndex].value;
-    updateVesselInfo(myId, "N/A", sload_status, sload_percentage, slat, slng, sspeed);
+    updateVesselInfo(myId, "N/A", sload_status, sload_percentage, 23.769357, 90.381475, sspeed);
 }
